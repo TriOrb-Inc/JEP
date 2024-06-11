@@ -17,7 +17,7 @@ set -e
 for (( ; ; ))
 do
     echo "Do you want to remove the default OpenCV (yes/no)?"
-    read rm_old
+    rm_old="yes"
 
     if [ "$rm_old" = "yes" ]; then
         echo "** Remove other OpenCV first"

@@ -38,7 +38,14 @@ sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt-get install -y python3.10-dev python3-numpy
 sudo apt-get install -y libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev
 sudo apt-get install -y libv4l-dev v4l-utils qv4l2
-sudo apt-get install -y curl unzip
+sudo apt-get install -y curl unzip gcc-10 g++-10
+export CC=/usr/bin/gcc-10
+export CXX=/usr/bin/g++-10
+export CUDA_ROOT=/usr/local/cuda
+unlink $CUDA_ROOT/bin/gcc
+unlink $CUDA_ROOT/bin/g++
+ln -s /usr/bin/gcc-10 $CUDA_ROOT/bin/gcc
+ln -s /usr/bin/g++-10 $CUDA_ROOT/bin/g++
 
 
 echo "------------------------------------"

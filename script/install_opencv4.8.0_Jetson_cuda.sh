@@ -59,7 +59,7 @@ echo "** Build opencv "${version}" (3/4)"
 echo "------------------------------------"
 mkdir release
 cd release/
-cmake -D WITH_CUDA=ON -D WITH_CUDNN=OFF -D CUDA_ARCH_BIN="7.2,8.6,8.7" -D CUDA_ARCH_PTX="" -D CUDA_TOOLKIT_ROOT_DIR=$(ls -d /usr/local/cuda-*.*) -D OPENCV_GENERATE_PKGCONFIG=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${version}/modules -D WITH_GSTREAMER=ON -D WITH_LIBV4L=ON -D BUILD_opencv_python3=ON -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_EXAMPLES=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -D WITH_CUDA=ON -D WITH_CUDNN=OFF -D CUDA_ARCH_BIN="7.2,8.6,8.7" -D CUDA_ARCH_PTX="" -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.4 -D OPENCV_GENERATE_PKGCONFIG=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${version}/modules -D WITH_GSTREAMER=ON -D WITH_LIBV4L=ON -D BUILD_opencv_python3=ON -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_EXAMPLES=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 make -j$(nproc)
 
 

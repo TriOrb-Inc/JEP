@@ -45,7 +45,7 @@ export CUDA_ROOT=/usr/local/cuda
 sudo unlink $CUDA_ROOT/bin/gcc
 sudo unlink $CUDA_ROOT/bin/g++
 sudo ln -s /usr/bin/gcc-10 $CUDA_ROOT/bin/gcc
-suo ln -s /usr/bin/g++-10 $CUDA_ROOT/bin/g++
+sudo ln -s /usr/bin/g++-10 $CUDA_ROOT/bin/g++
 
 
 echo "------------------------------------"
